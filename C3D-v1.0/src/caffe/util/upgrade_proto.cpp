@@ -540,6 +540,8 @@ LayerParameter_LayerType UpgradeV0LayerType(const string& type) {
     return LayerParameter_LayerType_TANH;
   } else if (type == "window_data") {
     return LayerParameter_LayerType_WINDOW_DATA;
+  } else if (type == "convolution3d") {
+    return LayerParameter_LayerType_DECONVOLUTION3D;    
   } else {
     LOG(FATAL) << "Unknown layer name: " << type;
     return LayerParameter_LayerType_NONE;
